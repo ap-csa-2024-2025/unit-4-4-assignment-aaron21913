@@ -4,14 +4,24 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // You can test your method here
-    // System.out.println(isPrime(1));
-    // System.out.println(isPrime(17));
-  }
+     Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Input String:");
+        String inputString = scanner.nextLine();
+      
+        String vowels = "aeiou";
+        int count = 0;
 
-  public static boolean isPrime(int N)
-  {
-    // TODO: Replace and write your code below
-    return false;
+        for (int i = 0; i < inputString.length() - 1; i++) {
+            if (inputString.charAt(i) == 'p' && vowels.indexOf(inputString.charAt(i + 1)) != -1) {
+                count++;
+            }
+        }
+
+        // Output the result
+        System.out.println("Contains p followed by a vowel " + count + " times.");
+
+      
+
   }
 }
